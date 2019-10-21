@@ -4,11 +4,14 @@
   color: white;
   font-family: "Titillium Web", sans-serif;
   line-height: 2em;
+  text-decoration: none;
 }
 
+/*contains styles for nav, hero img, and title
+on desktop contains page description */
 header {
   display: grid;
-  grid-template-rows: 50px 680px;
+  grid-template-rows: 50px 100vh;
   grid-template-columns: 100%;
   grid-template-areas:
     "nav"
@@ -74,11 +77,16 @@ header > #overlayTxt {
   font-size: 1.3em;
 }
 
+/* second half of page 
+on mobile contains description
+always contains logos linking to articles */
 #infoBody {
   display: flex;
   background-color: rgb(177, 106, 99);
 }
 
+/* overlay text becomes overflow, 
+squeezed from hero img when page becomes mobile */
 #overflowTxt {
   display: none;
   padding: 2em 0;
@@ -88,39 +96,107 @@ header > #overlayTxt {
 #overflowTxt > p {
   margin: 1em 3em;
   font-size: 1.3em;
-  color: black;
+  color: #663d39;
+}
+
+/*cards contain logo/page descriptions for each article */
+#cardGrid {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 15vh auto auto 15vh;
+  grid-template-areas: ". . ." "card1 . card3" ". card2 ." ". . .";
 }
 
 .card {
   display: flex;
   justify-content: center;
+  align-content: center;
+  justify-content: center;
   width: 100%;
 }
 
 .linkWrapper {
+  display: grid;
   margin: 2em;
-  max-height: 150px;
-  max-width: 150px;
-  display: flex;
-  justify-content: center;
+  max-height: 25vh;
 }
 
 .linkWrapper > img {
+  justify-self: center;
   height: 100%;
 }
 
-.card:hover {
+.linkWrapper > h2 {
+  display: block;
+  margin-top: 1em;
+  align-self: center;
+  justify-self: center;
+  color: transparent;
+  font-size: 1.5em;
+  text-decoration: none;
 }
 
+.card:hover > .linkWrapper > h2 {
+  color: white;
+}
+
+.coal {
+  grid-area: card1;
+}
+
+.wind {
+  grid-area: card2;
+}
+
+.grid {
+  grid-area: card3;
+}
+
+/* #cardGrid > button {
+  background-color: transparent;
+  border: none;
+} */
+
 @media screen and (max-width: 800px) {
-  #infoBody {
-    flex-direction: column;
-  }
   header > #overlayTxt > p {
     display: none;
   }
 
+  #infoBody {
+    flex-direction: column;
+  }
+
+  #cardGrid {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
   #overflowTxt {
     display: block;
+  }
+
+  .card {
+    display: flex;
+    justify-content: center;
+    /* width: 100%; */
+  }
+
+  .linkWrapper {
+    max-height: 150px;
+    max-width: 150px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .linkWrapper > img {
+    height: 100%;
+    justify-self: center;
+  }
+
+  .linkWrapper > h2 {
+    display: none;
   }
 }
