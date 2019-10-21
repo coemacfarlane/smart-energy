@@ -21,7 +21,6 @@ nav {
   justify-content: space-between;
   position: fixed;
   width: 100%;
-  /* grid-row-start: 1; */
   grid-area: nav;
   z-index: 3;
 }
@@ -77,6 +76,9 @@ header > #overlaytxt {
 
 #overflowtxt {
   display: none;
+  margin: 2em 0;
+  font-size: 1.3em;
+  color: black;
 }
 
 @media screen and (max-width: 800px) {
@@ -86,6 +88,5 @@ header > #overlaytxt {
 
   #overflowtxt {
     display: block;
-    color: black;
   }
 }
