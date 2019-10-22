@@ -42,6 +42,7 @@ nav {
   padding: 10px;
   width: 40px;
   height: 30px;
+  z-index: 4;
 }
 
 .hamburger > span {
@@ -56,6 +57,7 @@ nav {
   margin-right: 0.5em;
   background-color: transparent;
   border: transparent;
+  z-index: 4;
 }
 
 #dropdownMenu {
@@ -76,17 +78,16 @@ nav {
   color: black;
 }
 
-#dropdownMenu a:hover {
-  font-size: 8em;
-  color: #b16a63;
-  transition-duration: 0.4s;
-}
-
 #aboutLink {
-  font-size: 3em;
+  font-size: 2.5em;
   align-self: flex-end;
   justify-self: flex-end;
   margin: 1em;
+}
+
+#dropdownMenu a:hover {
+  color: #b16a63;
+  transition-duration: 0.4s;
 }
 
 /*backgrounds for pages besides home page*/
@@ -225,6 +226,13 @@ squeezed from hero img when page becomes mobile */
 }
 
 @media screen and (max-width: 800px) {
+  #aboutLink {
+    font-size: 2.5em;
+    align-self: center;
+    justify-self: flex-end;
+    margin: 1em;
+  }
+
   header > #overlayTxt > p {
     display: none;
   }
