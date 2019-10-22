@@ -32,11 +32,6 @@ nav {
   z-index: 3;
 }
 
-/* .dropdown {
-  grid-area: dropdown;
-  position: relative;
-} */
-
 .hamburger {
   grid-area: dropdown;
   justify-self: end;
@@ -92,6 +87,27 @@ nav {
   align-self: flex-end;
   justify-self: flex-end;
   margin: 1em;
+}
+
+/*backgrounds for pages besides home page*/
+body {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.coal {
+  background-image: url("/imgs/coal.jpg");
+}
+
+.wind {
+  background-image: url("/imgs/windmill.jpg");
+}
+
+.grid {
+  background-image: url("/imgs/powerlines.jpg");
 }
 
 #wrapper {
@@ -196,22 +212,17 @@ squeezed from hero img when page becomes mobile */
   transition-duration: 0.4s;
 }
 
-.coal {
+.coalPos {
   grid-area: card1;
 }
 
-.wind {
+.windPos {
   grid-area: card2;
 }
 
-.grid {
+.gridPos {
   grid-area: card3;
 }
-
-/* #cardGrid > button {
-  background-color: transparent;
-  border: none;
-} */
 
 @media screen and (max-width: 800px) {
   header > #overlayTxt > p {
@@ -235,7 +246,6 @@ squeezed from hero img when page becomes mobile */
   .card {
     display: flex;
     justify-content: center;
-    /* width: 100%; */
   }
 
   .linkWrapper {
