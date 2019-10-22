@@ -17,13 +17,25 @@
     <header>
       <nav>
         <div id="logo">
-          <img src="imgs/logo_white.png" alt="logo" height="50px" />
+          <a href="index.html">
+            <img src="imgs/logo_white.png" alt="logo" height="50px" />
+          </a>
         </div>
+
+        <!-- <div class="dropdown"> -->
         <div class="hamburger">
           <span></span>
           <span></span>
           <span></span>
         </div>
+        <button onclick="toggleOpen()" class="dropdownBtn"></button>
+        <div id="dropdownMenu">
+          <a href="coal.html">COAL</a>
+          <a href="wind.html">WIND</a>
+          <a href="grid.html">GRID</a>
+          <a id="aboutLink" href="credits.html">About</a>
+        </div>
+        <!-- </div> -->
       </nav>
 
       <div id="wrapper">
