@@ -7,6 +7,10 @@
   text-decoration: none;
 }
 
+*:focus {
+  outline: none;
+}
+
 /*contains styles for nav, hero img, and title
 on desktop contains page description */
 header {
@@ -45,19 +49,41 @@ nav {
   z-index: 4;
 }
 
-.hamburger > span {
+.hamburger:hover {
+  cursor: pointer;
+}
+
+.hamburger .line {
   width: 100%;
   height: 3px;
   background: white;
   border-radius: 2px;
+
+  transition: all 0.4s ease-in;
+  -moz-transition: all 0.4s ease-in;
+  -webkit-transition: all 0.4s ease-in;
+  -o-transition: all 0.4s ease-in;
 }
 
-.dropdownBtn {
-  grid-area: dropdown;
-  margin-right: 0.5em;
-  background-color: transparent;
-  border: transparent;
-  z-index: 4;
+.hamburger.isActive .line:nth-child(2) {
+  opacity: 0;
+  background: black;
+}
+
+.hamburger.isActive .line:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+  -moz-transition: translateY(10px) rotate(45deg);
+  -webkit-transition: translateY(10px) rotate(45deg);
+  -o-transition: translateY(10px) rotate(45deg);
+  background: black;
+}
+
+.hamburger.isActive .line:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+  -moz-transition: translateY(-10px) rotate(-45deg);
+  -webkit-transition: translateY(-10px) rotate(-45deg);
+  -o-transition: translateY(-10px) rotate(-45deg);
+  background: black;
 }
 
 #dropdownMenu {
@@ -69,7 +95,7 @@ nav {
   height: 100vh;
   background-color: whitesmoke;
 }
-.show {
+#dropdownMenu.show {
   display: flex;
 }
 
@@ -86,7 +112,7 @@ nav {
 }
 
 #dropdownMenu a:hover {
-  color: #b16a63;
+  color: orange;
   transition-duration: 0.4s;
 }
 
@@ -227,10 +253,7 @@ squeezed from hero img when page becomes mobile */
 
 @media screen and (max-width: 800px) {
   #aboutLink {
-    font-size: 2.5em;
     align-self: center;
-    justify-self: flex-end;
-    margin: 1em;
   }
 
   header > #overlayTxt > p {
