@@ -11,6 +11,10 @@
   outline: none;
 }
 
+a:hover {
+  cursor: pointer;
+}
+
 /*contains styles for nav, hero img, and title
 on desktop contains page description */
 header {
@@ -202,7 +206,7 @@ squeezed from hero img when page becomes mobile */
 #overflowTxt > p {
   margin: 1em 3em;
   font-size: 1.3em;
-  color: #663d39;
+  color: #4f2925;
 }
 
 /* styling for informational section of articles */
@@ -210,6 +214,8 @@ squeezed from hero img when page becomes mobile */
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   opacity: 0.85;
+  width: 100%;
+  height: 100%;
 }
 .article section p {
   margin: 1em 3em;
@@ -227,6 +233,21 @@ section.wind {
 
 section.grid {
   background-color: #ac6b69;
+}
+
+iframe {
+  justify-self: center;
+  margin-top: 2em;
+  min-height: 50vh;
+  border-radius: 10px;
+}
+
+article h3 {
+  float: right;
+  margin-right: 1.5em;
+  text-align: right;
+  width: 8em;
+  font-size: 3em;
 }
 
 /*cards contain logo/page descriptions for each article */
@@ -288,6 +309,15 @@ section.grid {
   grid-area: card3;
 }
 
+@media screen and (max-width: 1000px) {
+  article h3 {
+    float: none;
+    width: 100%;
+    text-align: left;
+    margin-left: 0.5em;
+  }
+}
+
 @media screen and (max-width: 800px) {
   #dropdownMenu > a {
     font-size: 4.5em;
@@ -297,12 +327,25 @@ section.grid {
     align-self: center;
   }
 
+  #overlayTxt > h1 {
+    font-size: 3em;
+  }
+
   header > #overlayTxt > p {
     display: none;
   }
 
   #infoBody {
     flex-direction: column;
+  }
+
+  iframe {
+    margin: 0;
+  }
+
+  article h3 {
+    margin-right: 0;
+    width: 90vw;
   }
 
   #cardGrid {
