@@ -125,15 +125,15 @@ body {
   background-attachment: fixed;
 }
 
-.coal {
+body.coal {
   background-image: url("/imgs/coal.jpg");
 }
 
-.wind {
+body.wind {
   background-image: url("/imgs/windmill.jpg");
 }
 
-.grid {
+body.grid {
   background-image: url("/imgs/powerlines.jpg");
 }
 
@@ -153,7 +153,7 @@ body {
 }
 
 header > #overlayTxt {
-  margin: 3em 3em;
+  margin: 0 3em;
   grid-area: hero;
   justify-self: center;
   align-self: center;
@@ -161,16 +161,25 @@ header > #overlayTxt {
 }
 
 #overlayTxt > h1 {
-  margin-bottom: 2em;
-  font-size: 3em;
+  margin-bottom: 0.5em;
+  font-size: 5em;
 }
 
 #overlayTxt > p {
-  margin-bottom: 1em;
+  line-height: 2em;
   font-size: 1.3em;
 }
 
-/* second half of page 
+.article #overlayTxt > h1 {
+  float: right;
+}
+
+.article #overlayTxt > p {
+  margin-top: 10em;
+  width: 40%;
+}
+
+/* second half of home page 
 on mobile contains description
 always contains logos linking to articles */
 #infoBody {
@@ -186,10 +195,38 @@ squeezed from hero img when page becomes mobile */
   background-image: linear-gradient(rgba(228, 185, 179), rgb(177, 106, 99));
 }
 
+.article #overflowTxt {
+  background: transparent;
+}
+
 #overflowTxt > p {
   margin: 1em 3em;
   font-size: 1.3em;
   color: #663d39;
+}
+
+/* styling for informational section of articles */
+.article section {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  opacity: 0.85;
+}
+.article section p {
+  margin: 1em 3em;
+  font-size: 1.3em;
+  color: black;
+}
+
+section.coal {
+  background-color: #e09791;
+}
+
+section.wind {
+  background-color: #dfada6;
+}
+
+section.grid {
+  background-color: #ac6b69;
 }
 
 /*cards contain logo/page descriptions for each article */
@@ -252,6 +289,10 @@ squeezed from hero img when page becomes mobile */
 }
 
 @media screen and (max-width: 800px) {
+  #dropdownMenu > a {
+    font-size: 4.5em;
+  }
+
   #aboutLink {
     align-self: center;
   }
