@@ -141,6 +141,10 @@ body.grid {
   background-image: url("/imgs/powerlines.jpg");
 }
 
+body.about {
+  background-image: url("/imgs/marc-marchal-vBhGIjJJogY-unsplash.jpg");
+}
+
 #wrapper {
   height: 100%;
   grid-area: nav / 1 / hero / 1;
@@ -271,13 +275,14 @@ article > img {
 /* coal page Q/A */
 dl {
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
 }
 
 .q {
   font-size: 2em;
-  margin-right: 15vw;
+  /* margin-right: 15vw; */
   margin-top: 1em;
+  width: 85vw;
 }
 
 .a {
@@ -293,9 +298,12 @@ dl {
 
 .accordion {
   display: flex;
-  float: right;
+  margin-left: 7vw;
   height: 40px;
   width: 40px;
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
 }
 
 .accordion > span {
@@ -315,7 +323,7 @@ dl {
   transform: translateX(-20px);
 }
 
-.accordion.isActive > span:nth-child(2) {
+.active.accordion > span:nth-child(2) {
   transform: translateX(-20px) rotate(90deg);
 }
 
@@ -396,12 +404,20 @@ dl {
     align-self: center;
   }
 
+  .about > header {
+    grid-template-rows: 50px 200vh;
+  }
+
   #overlayTxt > h1 {
     font-size: 3em;
   }
 
   header > #overlayTxt > p {
     display: none;
+  }
+
+  .about #overlayTxt > p {
+    display: block;
   }
 
   #infoBody {

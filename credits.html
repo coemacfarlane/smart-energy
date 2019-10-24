@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap"
+      rel="stylesheet"
+    />
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+
+  <body class="about">
+    <header>
+      <nav>
+        <div id="logo">
+          <a href="index.html">
+            <img src="imgs/logo_white.png" alt="logo" height="50px" />
+          </a>
+        </div>
+
+        <div class="hamburger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+        <div id="dropdownMenu">
+          <a href="coal.html">COAL</a>
+          <a href="wind.html">WIND</a>
+          <a href="grid.html">GRID</a>
+          <a id="aboutLink" href="credits.html">About</a>
+        </div>
+      </nav>
+
+      <div id="overlayTxt">
+        <p>coal, wind, and grid logo -- graphics by Coe MacFarlane</p>
+        <p>all background images from Unsplash.com</p>
+        <p>
+          coal.flv -- video by Sara Peach and Chris Carmichael
+        </p>
+        <p>
+          coalintro.doc -- written by Sara Peach
+        </p>
+        <p>coalqa.doc -- written by Sara Peach</p>
+        <p>
+          grid.doc -- written by Courtney Woo
+        </p>
+        <p>grid.flv -- video by Eileen Mignoni and Courtney Woo</p>
+        <p>grid.swf -- graphic by Ashley Zammitt</p>
+        <p>gridcut.doc -- written by Eileen Mignoni</p>
+        <p>gridintro.doc -- written by Sara Peach</p>
+        <p>gridpic.jpg -- photo by Eileen Mignoni</p>
+        <p>logo.psd -- designed by Ashley Zammitt</p>
+        <p>overallintro.doc -- written by Sara Peach</p>
+        <p>wind.flv -- video by Nacho Corbella</p>
+        <p>windintro.doc -- written by Nacho Corbella</p>
+      </div>
+    </header>
+
+    <section id="infoBody">
+      <!-- <div id="overflowTxt">
+        <p>coal, wind, and grid logo -- graphics by Coe MacFarlane</p>
+        <p>
+          coal.flv -- video by Sara Peach and Chris Carmichael
+        </p>
+        <p>
+          coalintro.doc -- written by Sara Peach
+        </p>
+        <p>coalqa.doc -- written by Sara Peach</p>
+        <p>
+          grid.doc -- written by Courtney Woo
+        </p>
+        <p>grid.flv -- video by Eileen Mignoni and Courtney Woo</p>
+        <p>grid.swf -- graphic by Ashley Zammitt</p>
+        <p>gridcut.doc -- written by Eileen Mignoni</p>
+        <p>gridintro.doc -- written by Sara Peach</p>
+        <p>gridpic.jpg -- photo by Eileen Mignoni</p>
+        <p>logo.psd -- designed by Ashley Zammitt</p>
+        <p>overallintro.doc -- written by Sara Peach</p>
+        <p>wind.flv -- video by Nacho Corbella</p>
+        <p>windintro.doc -- written by Nacho Corbella</p>
+      </div> -->
+
+      <div id="cardGrid">
+        <!-- <button class="coal"></button> -->
+        <div class="card coalPos">
+          <a href="coal.html" class="linkWrapper">
+            <img src="imgs/coal_logo_white.png" alt="coal_logo" />
+            <h2>Debating Coal's Future</h2>
+          </a>
+        </div>
+
+        <!-- <button class="wind"></button> -->
+        <div class="card windPos">
+          <a href="wind.html" class="linkWrapper">
+            <img src="imgs/wind_logo_white.png" alt="wind_logo" />
+            <h2>Roping the Wind</h2>
+          </a>
+        </div>
+
+        <!-- <button class="grid"></button> -->
+        <div class="card gridPos">
+          <a href="grid.html" class="linkWrapper">
+            <img src="imgs/grid_logo_white.png" alt="grid_logo" />
+            <h2>Downing the Lines</h2>
+          </a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
