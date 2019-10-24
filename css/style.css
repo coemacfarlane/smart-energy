@@ -250,6 +250,57 @@ article h3 {
   font-size: 3em;
 }
 
+/* coal page Q/A */
+dl {
+  display: flex;
+  flex-direction: column;
+}
+
+.q {
+  font-size: 2em;
+  margin-right: 15vw;
+  margin-top: 1em;
+}
+
+.a {
+  display: none;
+  align-self: flex-end;
+  margin-right: 5vw;
+  width: 80%;
+  color: black;
+}
+.a.block {
+  display: block;
+}
+
+.accordion {
+  display: flex;
+  float: right;
+  height: 40px;
+  width: 40px;
+}
+
+.accordion > span {
+  align-self: flex-end;
+  width: 100%;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+
+  transition: all 0.4s ease-in;
+  -moz-transition: all 0.4s ease-in;
+  -webkit-transition: all 0.4s ease-in;
+  -o-transition: all 0.4s ease-in;
+}
+
+.accordion > span:nth-child(2) {
+  transform: translateX(-20px);
+}
+
+.accordion.isActive > span:nth-child(2) {
+  transform: translateX(-20px) rotate(90deg);
+}
+
 /*cards contain logo/page descriptions for each article */
 #cardGrid {
   grid-template-columns: 1fr 1fr 1fr;
