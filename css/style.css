@@ -250,6 +250,25 @@ article h3 {
   font-size: 3em;
 }
 
+article > img {
+  float: left;
+  font-size: 1.3em;
+  margin: 0 1em 0 3em;
+  width: 50vw;
+}
+
+#caption {
+  float: left;
+  font-size: 0.9em;
+  margin: 0 1em 0 4.33em;
+  width: 48vw;
+  padding: 1vw;
+  background: linear-gradient(
+    rgba(180, 180, 180, 0.6),
+    rgba(180, 180, 180, 0.3)
+  );
+}
+
 /* coal page Q/A */
 dl {
   display: flex;
@@ -397,6 +416,17 @@ dl {
   article h3 {
     margin-right: 0;
     width: 90vw;
+  }
+
+  article > img {
+    width: 100%;
+    margin: 0;
+  }
+
+  #caption {
+    width: 98vw;
+    margin: 0;
+    margin-bottom: 2em;
   }
 
   #cardGrid {
